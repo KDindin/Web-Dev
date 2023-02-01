@@ -203,22 +203,33 @@
 </html>
 -->
 
-<!-- 6.-->
+<!-- 6.Project-->
 <!--
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Project: Event invite</title>
         <style>
+        body{
+            background-color: rgb(58, 187, 230);
+        }
             #invitation{
                 position: relative;
                 color: yellow;
                 text-align: center;
+
             }
             #freedom{
-                position:a;
+                float: right;
+                margin-top: 2px;
+                margin-right:15px;
+                color: yellow;
             }
+            .list{
+                color:rgb(224, 237, 38);
+            }
+            #picture
         </style>
     </head>
     <body>
@@ -226,8 +237,9 @@
         <h1 id= "invitation">You're invited!</h1>
         <h2 id="freedom">to freedom party!</h2>
 
-        <p>Awaits you::</p>
-        <ul>
+        <img id="picture" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Forms_of_government_2021.svg" alt="Freedom party logo" width="300">
+        <p class="list">Awaits you:</p>
+        <ul class="list">
             <li>delicious cuisines</li>
             <li>home-made cake</li>
             <li>costumes</li>
