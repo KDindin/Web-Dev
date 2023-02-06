@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Microsoft- домашняя страница официального сайта </title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCcys0z_vHATaiZqfh3LCA7eQIZAfO74Ffg&usqp=CAU">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body{
+            font-family: "Segoe UI","SegeoUI", "Helvetica Neue", Helvetica, Arial, sans-serif; ;
+        }
+        #heading{
+            margin-left: 73px;
+            margin-top: -7px;
+            /*font-family: "Segoe UI","SegeoUI", "Helvetica Neue", Helvetica, Arial, sans-serif; ;*/
+        }
+        .buttons{
+            color: rgb(0,0,0);
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 400;
+            margin-left: 19px;
+            text-decoration: none;
+        }
+        .buttons:hover{
+            border-bottom: 3px rgb(0,0,0) solid;
+            padding-bottom: 3px;
+        }
+        #intro{
+            margin-top: -347px;
+            margin-left: 38px;
+            max-width: 462px;
+            height: 400px;
+
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 13px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown{
+            display: inline-block;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 93%;
+            margin-left: 3.8%;
+        }
+        .container div{
+            width:23%;
+        }
+        .container a{
+            text-decoration: none;
+            color:black;
+        }
+        .container h1{
+            font-weight: 500;
+            line-height: 36px;
+        }
+        .container p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .ref{
+            color: rgb(50, 77, 177);
+            font-weight: 500;
+            margin-top: 23px;
+            font-weight: 550;
+        }
+    </style>
+
+</head>
+<body>
+    <div id= "heading">
+        <a href="http://localhost:63342/Web-Dev/Lab2/Microsoft.html?_ijt=qc156nsfn81is0ob2934jg3a48&_ij_reload=RELOAD_ON_SAVE"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVMAAACVCAMAAADSU+lbAAAApVBMVEX////+/v53d3fyUCICpO+AuwH/uQJzc3Nubm5tbW10dHTySxcAou//twD4+Ph5eXnl5eXt7e3zhGlhu++IiIilzVnyRAL3wLT1+Oh4uADV5rb9ymCn2fX8+en957T9y1m5ubna2trIyMiioqKrq6vx8fGAgIC2trbPz8+QkJCampqKiorU1NSenp5lZWWhyl3yfmH30cagyk/f7ce84fT87Mf9yU7gHQ6ZAAAKM0lEQVR4nO2ca7frphGGR25aEG11SZ00vZxG1tXyZfeSpv//pxUEg0DCkk+Wtq21Mu+nswUS6NHADAM+ACQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCRSQN+u6V//BvjhuzX956d3v8iO9Ps1ff9nyfS3a/rLXyEiacFv1kRMv1bEdHsR0+1FTLcXMd1exHR7EdPtRUy3FzH9xTKLpkABMf1FkjCzU1nesmT+3jtlGvz++xFAXqd8UJzNevrJTJ3EwkIHp3UAkqzZMVWIas4OWvHp1Uwzq/wRIkhyrGLqQFJLA2jnnd2JIDnyA4q/mCkksRVvHiCCy1hnqAJwVV0Wgd7uQgBHdngjU6ftMkwI8rGDqWZaaisQ7U6Z1milgjGXqZ26XsX0ESEoZkzv5kr8yLTfKsgNUhH31T39OJnBJZ2A6e7LmB4CDnKoIw5Tphdk+nAOfqeg090Tx1yBVI5C8TzVdiS+jimrQ4TgxmdMC3OJ7RFpBK22Ap4YA5Wveb6nMXsD08MhEB5Lo5zbaZIOlhA/mIHfK2i0mbJu7F06RFbvYBryUnZycpjKbl9jHj9yam8WZLrHrr9v/fd7IVNxDDDt2JypWqacTjuN+eHEZ5P9+5iGvJTroUam2o1uz2MLIVP+ZqbpIy8FZ+5WSHfK0dVemLa1HuHp1EtBP9hpamYAl2noccvZg1nBSv1oqfThrTifjmMf4C12ajzR1O2Y/rGumDCFaJ6akn/m56Kuqro455EpVJV0RRUilkWZOfWTrBzqd2WWzLkBNDf9uFs+aUv+meuyujw5yRz1L+uj8pG6ZWr0EqZRNUAT1wkmbb8895hC0iodvSSKyq61nLNBnLf1sMaCXlY7Hlv1NkUac84/MoSdVU79tMqm2E69wGJ27JwRJGF3R4Zl8aG/4Qc8D90yk79sFzW58hqmCX5cz0tBpEn34DNtmFBys2iQX2Lm+DPBLwPT41CVFzZVZPwgZH3sRhQHFvfuqgyaPnYf5yyDoam8pmRhq4MQKLlsbLxuNbnyIqZwHBr2vZTxUPw8Y6o/gGUKUDKPkHxSpZkOj5VMe1zPKqbSaLk4TMRkO7bl7OA/b8yawSll01sFr4dhX/JpSVCvYdpgdzwvZTwUhxWmAHU8I+QxLXE5OzAFqGb1h7ICH5izCXLLFMrgrbxSE/fOmCa6q46tSGMZrknbXWNqk2sHIedGroB4TFmXWm6K6VhfzaUjv/hmJka0ajlr6nJkCufYbWocHdJSd8cUKpw7x1LjoaT36JaYjqbDeN+VZVkfY+ExHeJbweOYM8l05CJdU3Euu95OBEJ7tpOpwOpTlp2KiySrmY7JXMbuRVkWd0tVfg8oP9QOFD485ijbPb1D9annT12m2TRUhsRSXmQ6vie/Y/ySXWKPqSrsz1l2qyXTJEVDK02YmfeY6dJ3mXBZfc1BTWd8lDVgLuMKXYQ2L1rpUxMpjPmzxEqHArI5/edT56SjH/65pu9+WmYawdUMU8tUjyQVsy4zxRS1nDfsBAu32mcam+AwaaAz2wRpNtZHMkOkjl2pRh+YJ54Bu03hgB86CuDE/A/j0ycU+UuSx7UWmaKXwhWSeTMu/16aTyHH97z5cVjkMuXW/UCEDNxQzLhD/UlNBpQVbgVtpsJ/2nDR+D8TXM/XUfO1aQDFZvKYGi9l/YT1UNEyU2PDwZQ2MnWmaUwhTMI2s5ITR/UJNVNxmS47c8zguxYCgOmKXNvyOtNX2Wk08VLmz2EVsMAUIpNWD2e0DVNneWCe6+U41GWT++bjNKQa8OuUwSU0GqqOWZ5h+qdV/ReiL39b048/r8ynke+l0EMNA2qJaR4yuynTw7hnGelLboDh8bqB9VHaEzl18Lq/t+h34Rmmf1jV3wG+/O6Pa/rHGlPfS5mPr/uxxPQ8T6vPmDqjGBpn4nRr4heVU6V1RTJiqp08gOngNHcOxq/rVp5h+s2aNNM1PcPUmIoKSgBXQNEaU1MkgvvS8yUvurRZCsxM59pJXW0sz2KbIonMxDnGAxPW/Q6ZGo+svJQxFQNjiSmmXoPeFJmOftqmjKd2DfE4gCF3UyH8iLksB7t368XYr9vAPphaLyXHkAk6TZ5qiWk1T1fPmPKvYKqjfi+HIng3pEgiU6WY3qo7u0+mZk6TQUnj5VOXmN43ZmpGRlJxh2pcLzK9OPPszpjaML/wPNRzdhoKpZaY3vz6FpgZ2MP6dqQ6nCXwsTv39rudT62XkktnHXSaoxzPzKcseM4nwDQPG9vcd6mdg8OYwFKOU/uoaRgWmd6aaWNvTBOM9NjYyRWmpRtwP8G0MYzuE6bmDJG3eQBJgYlA9Xxcmk78oR+e7Y3paHW6E9kTTM0cPFtIPmBqF0mTdRe2LLzLkmo/Ln1tvsqfi/0QeX9MMyerO8bWS0wxc8dDxwJDTBGMF6BC9GBcuwE92vIkQMVlrUgeMDX5gzGP81KmoxV5b72YQ6lCiQ1MJAWY4iLJ36bBNbtet7klYxrCfj/vwIxJ9iDpx0ytb3s1U2f7IU6eYpphUv7ubrTnA8YAU+lpzPR3cerj+GDDVFk72/2G6TD/2u/XOtuoiUni4I5sgKm7zlKdezHTaFwVjiNscT/KHvFlR8zLQ9N9VA+ZnpHf1aaN8ZIZGikvEsy3NWZBqh4Bjfl+Qpzw1gw/kXF6IaamhzJ+U0pezHTM/XgH4ReZ2uOUgvdl1jRZeWFsuhftNGo3QASrzkN93DoZsqeRio34obqp3ZHodnStEPcI1FbM0NT5YgOD5jFTPJwoiqzJivTlTHEUuuf7l/dNne1htY8Xx3y6b+oxHc5c4Fiw9fWfph+tLuJpimVMj9vxezhNaYQYy4WYnuwun7yFHV7NdEwIu35lcd9UFs/33BeYqnecnZg4uD8OamdlmM
+        GWs+fsxMRA0LYQiqXwOLrR65mauc39UckKU2nH8RTSElM5GOZnSQ4std58ytT5KZYMWOeb+IKVM6P0mJ68j/56ppEOPNwYfo2p7HTrm56Il5jKhu/+cSk5KqsxtvKJC546sRPIOdW/VcRXtzzAdDKSPplp4Dd8
+        UH/ISx/eob3uw/0dX6Pv+vCWkeU1NidKhJwKj6VOZre65pSpSpHcGZ5AkTcw91wfnHtVpgqFYHFbeGtRtaefxrp4OIwyJq01U93XDy8BAWWqW5M3fK6Psr839UHPLzWmHnh3TZaRWXFvBWPpsSrxwCiYmoFNAInmXPepYKLtu
+        1syWTA0t+7SqrJLd/KWALo4OQ3FLO3rcvJjYtN9/wXU5VL17nCtb58bS0XB/zfg4SXnd9GhrdjQJu3Cpq2/1/sVZU/eunDL5zL9VYqYbi9iur2I6fYiptuLmG4vYrq9iOn2Iqbbi5huL2K6vT71/OmvVE+dk4YvP67pfz+HzqOTSCQS
+        iUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCTU/wFH24tLVTubaAAAAABJRU5ErkJggg==" alt="" width = "8%"></a>
+        <div style="margin-left: 119px; margin-top: -38px">
+            <a class="buttons" href="https://www.microsoft.com/ru-ru/microsoft-365?rtc=1">Microsoft 365</a>
+            <a class="buttons" href="https://www.microsoft.com/ru-ru/microsoft-365/microsoft-office?rtc=1">Office</a>
+            <a class="buttons" href="https://support.microsoft.com/ru-ru/windows">Windows</a>
+            <a class="buttons" href="https://support.microsoft.com/ru-ru">Поддержка</a>
+        </div>
+        <div style="margin-left: 935px; margin-top: -20px">
+            <div class="dropdown">
+                <span class="buttons">Продукты Майкрософт
+                    <i class="fa fa-caret-down"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="#" >Software</a>
+                    <a href="#" >PCs & Devices</a>
+                    <a href="#" >Развлечения</a>
+                    <a href="#" >Для бизнеса</a>
+                    <a href="#" >Для разработчиков и ИТ</a>
+                    <a href="#" >Другое</a>
+                </div>
+            </div>
+            <span class="buttons">Поиск</span>
+            <a href="#"><i class="fa fa-search" style="color:black"></i></a>
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1675600515&rver=7.3.6960.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2frpsauth%2fv1%2faccount%2fSignInCallback%3fstate%3deyJSdSI6Imh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vcnUta3ovIiwiTGMiOiI0MDk2IiwiSG9zdCI6Ind3dy5taWNyb3NvZnQuY29tIn0&lc=1033&id=74335&aadredir=0"
+               class="buttons">Войти</a>
+            <i class='far fa-user-circle' style="font-size: 18px"></i>
+        </div>
+
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-M365-Icon-Bounce-Word-Merch:VP5-1920x600"
+             style=" height:450px; width:106.9%; margin-left: -85px; margin-top: 17px;">
+
+        <div id="intro">
+            <h2 style="font-size: 35px;">Microsoft 365</h2>
+            <p style="font-size: 17px; margin-top: -9px">
+                Все, что вам нужно, чтобы достичь большего за меньшее время
+            </p>
+            <div style="margin-top: 30px">
+                <button style="border: none; border-radius: 4px; background-color: rgb(0,103,184); padding: 10px; height: 12%; width:31%; color: white; font-size: 15px">
+                    Для 1 человека
+                </button>
+                <a class="buttons" style="height: 10%; width:37%; color: black; font-size: 17px; margin-left: 14px; font-weight: 500">
+                    До 6 человека   >
+                </a>
+            </div>
+        </div>
+    </div>
+
+ <div class="container">
+    <div>
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Windows11-GlobalLaunch?wid=380&hei=213&fit=crop"
+                        alt="notebook" style="max-width: 100%">
+
+            <a href="https://support.microsoft.com/ru-ru/windows#pchealthcheck">
+                <h1>Разработано для жизни — сегодня и в будущем</h1>
+                <p>Следующее поколение игр. Ваши цели. Друзья и семья. С Windows 11 вы станете еще ближе к тому, что успели полюбить.</p>
+                <p class="ref">Проверьте, готов ли ваш ПК ></p>
+            </a>
+
+    </div>
+    <div>
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop"
+             alt="notebook" style="max-width: 100%">
+
+            <a href="https://www.microsoft.com/ru-ru/edge?form=MI13F3&OCID=MI13F3">
+                <h1>Microsoft Edge</h1>
+                <p>Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p>
+                <p class="ref">Скачать ></p>
+            </a>
+
+    </div>
+    <div>
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop"
+             alt="notebook" style="max-width: 100%">
+
+            <a href="https://support.microsoft.com/ru-ru/windows#pchealthcheck">
+                <h1>Microsoft OneDrive</h1>
+                <p>Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.</p>
+                <p class="ref">Подробнее > </p>
+            </a>
+
+    </div>
+    <div>
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop"
+             alt="notebook" style="max-width: 100%">
+
+            <a href="https://support.microsoft.com/ru-ru/windows#pchealthcheck">
+                <h1>OneNote</h1>
+                <p>Приведите свои заметки и дела в порядок.</p>
+                <p class="ref">Узнать больше > </p>
+            </a>
+    </div>
+ </div>
+
+ </body>
+</html>
