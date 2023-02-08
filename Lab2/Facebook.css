@@ -1,0 +1,112 @@
+body{
+    font-family: Klavika, sans-serif;
+    background-color: rgb(240,242,245);
+    width: 99%;
+}
+#facebook{
+    position: relative;
+    top: 168px;
+    left: 193px;
+    width: 35%;
+
+}
+#facebook>h1{
+    font-weight: 500;
+    max-width: 534px;
+    line-height: 32px;
+    font-size: 28px;
+    margin-top: -12px;
+    margin-left: 28px
+}
+#sign-in{
+    position: relative;
+    width: 378px;
+    height: 345px;
+    left: 800px;
+    top: -87px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 1px;
+    padding-left: 18px;
+    box-shadow: 1px 2px 8px rgb(209,209,209);
+}
+#sign-in input{
+    border: 1px solid rgb(177,178,179);
+    border-radius: 4px;
+    width: 327px;
+    padding: 14px;
+    font-size: 17px;
+    color : rgb(145,148,166);
+}
+#sign-in input[type=password]:focus, #sign-in input[type=text]:focus{
+    border: 1px solid rgb(24,119,242);
+    outline: none;
+    box-shadow: 1px 2px 7px #87cefa;
+}
+
+#new-password{
+    color: rgb(24,119,242);
+    font-size: 14px;
+    margin-left: 120px;
+    text-decoration: none;
+}
+#new-password:hover{
+    border-bottom: 1px rgb(24,119,242) solid;
+}
+#sign-in>hr{
+    width: 358px;
+    margin-left: 1px
+}
+button{
+    width: 230px;
+    background-color: rgb(66,183,42);
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    padding: 13px;
+    border-radius: 6px;
+    border-color: white;
+    margin-left: 65px;
+    margin-top: 20px;
+}
+#special-account{
+    margin-top: 48px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    width: inherit;
+    margin-left: -15px
+}
+.without-bullets{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    padding: 5px;
+    margin-left: 200px;
+    margin-bottom: 5px;
+    margin-top: 6px;
+}
+.without-bullets a, pre>p{
+    font-size: 13px;
+    color: rgb(145,148,166);
+    text-decoration: none;
+}
+.without-bullets a:hover{
+    border-bottom: 1px rgb(145,148,166) solid;
+}
+#footer{
+    background-color: white;
+    margin-top: 200px;
+    margin-left: -8px;
+    padding: 25px;
+    width: 1389px;
+    height: 20vh;
+}
+pre{
+    margin-left: 120px;
+    margin-top: -32px;
+    line-height: 15px;
+}
