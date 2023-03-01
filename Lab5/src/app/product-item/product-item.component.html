@@ -1,0 +1,40 @@
+<div *ngIf="product != undefined">
+  <h3>
+    <a href="{{product.kaspi}}">
+      {{product.name}}
+    </a>
+  </h3>
+
+  <img src="{{product.image}}" alt="product image" height="150px">
+
+  <p *ngIf="product.description">
+    {{product.description}}
+  </p>
+
+  <div style="font-size: 16px; display: inline-flex; margin: 0;">
+    Price: {{ product.price | currency: 'KZT' }}
+  </div>
+ <br>
+  <div style="font-size: 16px; display: inline-flex; margin: 0;">
+    Rating: {{product.rating}}
+  </div>
+
+  <div style="margin: 5px 0 5px 0">
+    <button type="button" (click)="like(product)">Like</button>
+    <p>Likes : {{product.likes}}</p>
+  </div>
+
+  <div style="display: inline-flex; margin-top: 20px">
+    <a
+      href="https://telegram.me/share/url?url={{ product.kaspi }}"
+      target="_blank"
+    >
+      <button type="button" (click)="share()">Share</button>
+    </a>
+
+    <button type="button" (click)="delete(product.id)" style="width: 70px; background-color: #ff4242">
+      Delete
+    </button>
+  </div>
+
+</div>

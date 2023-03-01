@@ -1,0 +1,3 @@
+<div *ngFor = "let product of products" >
+  <app-product-item *ngIf="product.category == category" [product] = product (removeID)="remove($event)" ></app-product-item>
+</div>
