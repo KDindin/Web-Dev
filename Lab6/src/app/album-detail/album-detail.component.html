@@ -1,0 +1,25 @@
+<div *ngIf="loaded">
+
+  <button (click)="goBack()">Back</button>
+
+  <h2>{{album.id}}. {{album.title}}</h2>
+
+  <p>Rename title</p>
+<div>
+  <input input="text" [(ngModel)]="name">
+  <button (click)="updateAlbum()">Save</button>
+</div>
+
+  <div>
+    <a [routerLink]="['photos']">Photos of album</a>
+  </div>
+
+</div>
+<p *ngIf="!loaded">Loading album...</p>
+
+<ul *ngIf="photos.length">
+  <li *ngFor="let photo of photos">
+    {{photo.id}}) {{photo.title}}
+    <img src="{{photo.url}}" alt="photo of album">
+  </li>
+</ul>
